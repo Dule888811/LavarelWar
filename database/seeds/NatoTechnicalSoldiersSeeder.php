@@ -11,7 +11,6 @@ class NatoTechnicalSoldiersSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\NatoTechnicalSoldiers::class, 4);
-
+        factory(App\NatoTechnicalSoldiers::class, 4)->create();
     }
 }
