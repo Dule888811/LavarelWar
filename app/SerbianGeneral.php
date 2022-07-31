@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Http\Traits\GeneralTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class SerbianGeneral extends Model
 {
+use GeneralTrait;
     public function scoutserbians(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany('App\ScoutSerbian');
@@ -15,8 +17,5 @@ class SerbianGeneral extends Model
     {
         return $this->hasMany('App\SerbianSoldier');
     }
-    public function createPlane()
-    {
-        $plane = new Plane(0.8);
-    }
+
 }

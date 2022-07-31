@@ -4,6 +4,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 class SerbianSoldier extends Soldier
 {
+    /**
+     * @var int|mixed
+     */
+
+    protected $fillable = ['number'];
     public function __construct($equipment,$efficiency,$courage,$knowledgeOfTheTerrain)
     {
         $this->equipment = $equipment;

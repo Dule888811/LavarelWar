@@ -1,14 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
-
-
-
-
-
-
 use App\Jobs\PlainJob;
 use App\NatoGeneral;
 use App\NatoSoldier;
@@ -19,13 +11,14 @@ use Illuminate\Support\Facades\Artisan;
 
 class NatoController extends Controller
 {
-
     public function GetNatoSoldiers(Request $request)
     {
         $mystring = url()->full();
+
         $pos = substr($mystring, 39);
+
         $NatoArmy[] = array();
-            for($x=0;$x<139;$x++)
+            for($x=0;$x<(int)$pos;$x++)
             {
               $NatoArmy[] =  new NatoSoldier(0.8,0.8,0.4,0,rand(0,1),rand(0,1));
             }
@@ -60,9 +53,5 @@ class NatoController extends Controller
             }
         }
     }
-
-
-
-
 
 }
