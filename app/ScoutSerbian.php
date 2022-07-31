@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use stdClass;
 
 class ScoutSerbian extends Model
 {
@@ -14,13 +15,23 @@ class ScoutSerbian extends Model
     {
         return $this->belongsTo('App\SerbianGeneral');
     }
-    public function findMainObject()
+    public static function fakeObject()
     {
-
+        $object = clone(new MainObject());
     }
 
-    public function mineTheBattlefield()
+    public static function  mineTheBattlefield()
     {
+        $mines = array();
+        $object = new stdClass;
+        $object->name = "lay mines";
+        $object->destroy = 1.2;
+        $object->hidden = true;
+        $object->load = true;
+        for($x=0;$x<100;$x++)
+        {
+          $mines[] =  $object . $x = clone($object);
+        }
 
     }
 }

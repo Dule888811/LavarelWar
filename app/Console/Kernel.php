@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+
     ];
 
     /**
@@ -25,6 +25,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('queue:work --stop-when-empty')->everyFiveMinutes();
+        $schedule->command('bombing')->twiceDaily(1, 13);
+        $schedule->command('heroin')->twiceDaily(1, 13);
+        $schedule->command('fakeObjects')->hourly();
+        $schedule->command('mines')->hourly();
     }
 
     /**

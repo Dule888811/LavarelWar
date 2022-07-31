@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SchedulerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/WelcomeNato','NatoController@GetNatoSoldiers')->name('nato-soldiers');
-Route::post('/WelcomeSerbian','SerbianController@GetSerbianSoldiers')->name('sr-soldiers');
+Route::get('/WelcomeNato','NatoController@GetNatoSoldiers')->name('nato-soldiers');
+Route::get('/WelcomeSerbian','SerbianController@GetSerbianSoldiers')->name('sr-soldiers');
 Route::get('/Nato','NatoController@makePlains')->name('nato-plains');
 Route::get('/Plain','SerbianController@addPlains')->name('sr-plains');
+

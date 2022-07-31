@@ -97,16 +97,14 @@
         </div>
 
         <div class="links">
-            <form method="POST" action ="{{route('nato-soldiers')}}" class="first-form">
-                @csrf
+            <form method="GET" action ="{{route('nato-soldiers')}}" class="first-form">
                 <div class="form-group">
                     <label class="soldiers-Label" for="NATO">Enter number of NATO soldiers</label>
                     <input type="number" class="form-control"  min="100" required="true" name="NATO" id="NATO"  placeholder=" NATO soldiers">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <form method="POST" action="{{route('sr-soldiers')}}" class="second-form">
-                @csrf
+            <form method="GET" action="{{route('sr-soldiers')}}" class="second-form">
                 <div class="form-group">
                     <label class="soldiers-Label" for="Serbian">Enter number of Serbian soldiers</label>
                     <input type="number" class="form-control" min="100" required="true" name="Serbian" id="Serbian"  placeholder=" Serbian soldiers">

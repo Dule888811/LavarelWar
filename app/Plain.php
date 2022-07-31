@@ -11,6 +11,9 @@ class Plain extends Model
     ];
     public function bombing()
     {
-        $this->bombing();
+       if($this->bombing() == 'position_sr')
+       {
+           SerbianSoldier::all()->count = 0.5 * SerbianSoldier::all()->count;
+       }
     }
 }

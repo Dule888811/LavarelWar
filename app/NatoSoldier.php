@@ -38,15 +38,7 @@ class NatoSoldier extends  Soldier
         $this->efficiency = 0.2 * $this->efficiency;
         $this->courage = 0.1 * $this->courage;
     }
-    public function sellHeroin()
-    {
-        if($this->albanian)
-        {
-            $this->sellHeroin();
-        }else{
-            $this->buyHeroin() || $this->wicked();
-        }
-    }
+
     public function buyHeroin()
     {
         $this->courage = 4.1 * $this->courage;
