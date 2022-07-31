@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 Route::post('/WelcomeNato','NatoController@GetNatoSoldiers')->name('nato-soldiers');
 Route::post('/WelcomeSerbian','SerbianController@GetSerbianSoldiers')->name('sr-soldiers');
+Route::get('/Nato','NatoController@makePlains')->name('nato-plains');
+Route::get('/Plain','SerbianController@addPlains')->name('sr-plains');
