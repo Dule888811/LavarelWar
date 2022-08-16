@@ -5,7 +5,7 @@ use App\ScoutSerbian;
 use App\SerbianSoldier;
 use Illuminate\Http\Request;
 
-class SerbianController
+class SerbianController extends Controller
 {
     public function GetSerbianSoldiers(Request $request)
     {
@@ -16,7 +16,7 @@ class SerbianController
         {
             $SerbianArmy[] =  new SerbianSoldier(0.8,0.8,0.4,1);
         }
-        
+
     }
 
 

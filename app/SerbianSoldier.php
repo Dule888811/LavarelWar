@@ -11,10 +11,8 @@ class SerbianSoldier extends Soldier
     protected $fillable = ['number'];
     public function __construct($equipment,$efficiency,$courage,$knowledgeOfTheTerrain)
     {
-        $this->equipment = $equipment;
-        $this->efficiency = $efficiency;
-        $this->courage = $courage;
-        $this->knowledgeOfTheTerrain = $knowledgeOfTheTerrain;
+
+        parent::__construct($equipment,$efficiency,$courage,$knowledgeOfTheTerrain);
     }
     public function serbiangeneral(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

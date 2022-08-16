@@ -30,7 +30,7 @@ class ScoutSerbian extends Model
         $object->load = true;
         for($x=0;$x<100;$x++)
         {
-          $mines[] =  $object . $x = clone($object);
+          $mines[] =   clone($object);
         }
 
     }
