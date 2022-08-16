@@ -90,7 +90,7 @@
             @endauth
         </div>
     @endif
-
+<?php $test = new \App\SerbianSoldier(1,1,1,1); dd($test) ?>
     <div class="content">
         <div class="title m-b-md">
             URA

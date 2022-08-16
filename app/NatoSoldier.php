@@ -8,10 +8,12 @@ class NatoSoldier extends  Soldier
     public $wicked;
     public function __construct($albanian,$wicked,$equipment,$efficiency,$courage,$knowledgeOfTheTerrain)
     {
-         parent::__construct($equipment,$efficiency,$courage,$knowledgeOfTheTerrain);
         $this->albanian = $albanian;
         $this->wicked = $wicked;
-
+        $this->equipment = $equipment;
+        $this->efficiency = $efficiency;
+        $this->courage = $courage;
+        $this->knowledgeOfTheTerrain = $knowledgeOfTheTerrain;
     }
     public function natogeneral(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
